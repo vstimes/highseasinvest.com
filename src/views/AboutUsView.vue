@@ -1,52 +1,34 @@
 <template>
   <div class="about-us">
     <div class="banner">
-      <img src="@/assets/aboutus-banner.avif" alt="About Us">
-      <h1>{{ $t('page_titles.about_us') }}</h1>
+      <p class="banner-text">{{ $t('about_us.banner_text') }}</p>
     </div>
     <div class="container">
-      <div class="mission-section">
-        <h2>{{ $t('about_us.mission.title') }}</h2>
-        <p>{{ $t('about_us.mission.description') }}</p>
-      </div>
-      <div class="team-section">
-        <h2>{{ $t('about_us.team.title') }}</h2>
-        <div class="team-grid">
-          <div class="team-member" v-for="member in teamMembers" :key="member.name">
-            <img :src="member.image" :alt="member.name">
-            <h3>{{ member.name }}</h3>
-            <p class="role">{{ member.role }}</p>
-          </div>
+      <section class="core-members-section">
+        <div class="image-container">
+          <img src="@/assets/core-members.avif" alt="Core Members">
         </div>
-      </div>
+        <div class="text-container">
+          <h2>{{ $t('about_us.core_members.title') }}</h2>
+          <p>{{ $t('about_us.core_members.p1') }}</p>
+          <p>{{ $t('about_us.core_members.p2') }}</p>
+          <p>{{ $t('about_us.core_members.p3') }}</p>
+        </div>
+      </section>
+
+      <section class="keywords-section">
+        <blockquote>
+          <p>{{ $t('about_us.keywords.text') }}</p>
+        </blockquote>
+      </section>
     </div>
   </div>
 </template>
 
 <script setup>
-import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
-
-// Placeholder data - replace with actual data
-const teamMembers = computed(() => [
-  {
-    name: t('about_us.team.members.member1.name'),
-    role: t('about_us.team.members.member1.role'),
-    image: 'https://via.placeholder.com/150'
-  },
-  {
-    name: t('about_us.team.members.member2.name'),
-    role: t('about_us.team.members.member2.role'),
-    image: 'https://via.placeholder.com/150'
-  },
-  {
-    name: t('about_us.team.members.member3.name'),
-    role: t('about_us.team.members.member3.role'),
-    image: 'https://via.placeholder.com/150'
-  }
-]);
 </script>
 
 <style scoped>
@@ -57,93 +39,129 @@ const teamMembers = computed(() => [
 .banner {
   position: relative;
   text-align: center;
-  color: white;
-}
-
-.banner img {
-  width: 100%;
   height: 50vh;
-  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('@/assets/aboutus-banner.avif');
+  background-size: cover;
+  background-position: center;
 }
 
-.banner h1 {
+.banner::after {
+  content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+}
+
+.banner-text {
+  font-size: 2rem;
   font-weight: bold;
+  z-index: 2;
+  width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #000;
+  white-space: pre-line;
+  text-align: left;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 4rem auto;
   padding: 0 2rem;
 }
 
-.mission-section {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.mission-section h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #003366;
-  margin-bottom: 1rem;
-}
-
-.mission-section p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.team-section h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #003366;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.core-members-section {
+  display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
-.team-member {
-  text-align: center;
+.image-container {
+  flex-shrink: 0;
 }
 
-.team-member img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+.image-container img {
+  width: 363px;
+  height: 387px;
   object-fit: cover;
-  margin-bottom: 1rem;
 }
 
-.team-member h3 {
-  font-size: 1.2rem;
+.text-container h2 {
+  font-size: 2rem;
   font-weight: bold;
+  color: #003366;
+  margin-bottom: 1.5rem;
 }
 
-.team-member .role {
-  color: #666;
+.text-container p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.keywords-section {
+  margin-top: 4rem;
+}
+
+.keywords-section blockquote {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #555;
+  padding: 1.5rem 2rem;
+  margin: 0 auto;
+  position: relative;
+  text-align: left;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.keywords-section blockquote::before {
+  content: '“';
+  font-family: 'Georgia', serif;
+  font-size: 6rem;
+  color: #003366;
+  position: absolute;
+  left: -1rem;
+  top: -1rem;
+  opacity: 0.1;
+}
+.keywords-section blockquote::after {
+  content: '”';
+  font-family: 'Georgia', serif;
+  font-size: 6rem;
+  color: #003366;
+  position: absolute;
+  right: -1rem;
+  bottom: -2rem;
+  opacity: 0.1;
+}
+
+
+.keywords-section blockquote p {
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
-  .banner h1 {
-    font-size: 2rem;
+  .banner-text {
+    font-size: 1.5rem;
   }
   .container {
     margin: 2rem auto;
   }
-  .mission-section p {
-    font-size: 1rem;
+  .core-members-section {
+    flex-direction: column;
+  }
+  .image-container img {
+    width: 100%;
+    height: auto;
   }
 }
 </style>
