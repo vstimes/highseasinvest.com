@@ -145,7 +145,7 @@ onUnmounted(() => {
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 900px;
   padding: 0 1rem;
 }
 
@@ -217,6 +217,7 @@ onUnmounted(() => {
 .focus-content h3 {
   font-size: 2.5rem;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 /* Image Section */

@@ -130,6 +130,8 @@ const switchLanguage = (lang) => {
   font-weight: bold;
   color: #ccc;
   padding: 0;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .lang-switcher button.active {
@@ -150,6 +152,8 @@ const switchLanguage = (lang) => {
   cursor: pointer;
   padding: 0;
   z-index: 1001;
+    outline: none !important;
+  box-shadow: none !important;
 }
 
 .mobile-nav-toggle .bar {
