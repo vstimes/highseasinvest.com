@@ -131,7 +131,7 @@ onMounted(() => {
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 900px;
   padding: 0 1rem;
 }
 

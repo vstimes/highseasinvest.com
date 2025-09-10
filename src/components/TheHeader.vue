@@ -1,10 +1,9 @@
 <template>
   <header class="main-header">
-    <div class="logo">
+    <div class="logo"  style="margin-left: 70px">
       <img
         src="@/assets/logo H&G.avif"
         alt="High Seas Investment"
-        style="position: relative; left: 70px"
       />
     </div>
     <nav class="main-nav">
@@ -150,6 +149,8 @@ const switchLanguage = (lang) => {
   font-weight: bold;
   color: #ccc;
   padding: 0;
+  outline: none;
+  box-shadow: none;
 }
 
 .lang-switcher button.active {
