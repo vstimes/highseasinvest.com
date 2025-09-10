@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Service Scenarios",
+    "core": "Core Services",
+    "ecosystems": "Ecosystems",
+    "contact": "Contact"
+  },
+  "page_titles": {
+    "home": "Home",
+    "about_us": "About Us",
+    "contact_us": "Contact Us",
+    "core_services": "Core Services",
+    "service_scenarios": "Service Scenarios",
+    "sustainable_value_chain": "Sustainable Value Chain",
+    "happiness_industry_chain": "Happiness Industry Chain"
+  },
+  "hero": {
+    "title": "Ecosystem Investment & Advisory in",
+    "subtitle": "Travel, Leisure, Wellness & Sustainability"
+  },
+  "founder": {
+    "title": "Reflection of the Founder",
+    "p1": "How much would AI replace the work of investment bankers?",
+    "p2": "What would fundamentally distinguish the work of investment bankers and real estate brokers?",
+    "p3": "How to build an investment bank that thrives in the future, against automation and information transparency?",
+    "p4": "As a serial entrepreneur and investor in the global tourism market for more than a decade, I am trying to give investment banking a new form, which I named it “ecosystem investment bank”. This is a boutique investment bank which is deeply rooted in a certain industry and creates values for the entire industry ecosystem and its key stake holders, rather than just focusing on M&A transactions.",
+    "p5": "Many years of experience in the travel, hospitality and leisure industry has enabled me to find investment targets, business partners, and strategic investors often within my own social network. Regarded as a connector between China and the rest of the world, I have been invited to discuss Asia Entry strategies, speak at international conferences, serve as a judge in start-up competitions, or mentor in incubators.",
+    "p6": "Being a serial entrepreneur allows me to deeply empathize with client companies. Often times in discussing strategies with management teams, I feel like one of them. I sometimes joke that “our service is investment banking plus from McKinsey consulting and BD”. A natural result of this close entanglement is a work model, combining our network and expertise in the financial market with experience and insight of the industry.",
+    "p7": "After several years of being a partner in two boutique investment banks across China and France, together with a few industry gurus and experienced bankers, we founded High Seas, an alternative boutique investment bank with a unique approach and interdisciplinary team. Besides typical investment bank services, we also provide services in corporate strategy, business development, and even venture building. We are not just deal makers, but also co-founders. We are not just consultants, but also entrepreneurs. We are not just investors, but also operators. We focus on two areas: happiness and sustainability, one as the driving force for life, the other as the prerequisites for a better life. We are dedicated to transforming any sector into a “nature and future-friendly mode”. Currently, our work focuses specifically on clean energy, decarbonization, green construction and circular economy.",
+    "p8": "The only thing that doesn’t change is change itself. A new journey begins."
+  },
+  "focus": {
+    "title1": "Industry Focus 01",
+    "subtitle1": "Happiness Industry Chain",
+    "title2": "Industry Focus 02",
+    "subtitle2": "Sustainable Value Chain"
+  },
+  "footer": {
+    "copyright": "© 2023 by High Seas Investment. All Rights Reserved."
+  },
+  "core_services": {
+    "corporate_finance": {
+      "title": "Corporate Finance",
+      "items": [
+        "Mergers & Acquisitions",
+        "Capital Raising",
+        "Company Disposal",
+        "Management Buy-Out/In"
+      ]
+    },
+    "strategic_advisory": {
+      "title": "Strategic Advisory",
+      "items": [
+        "Market Entry Strategy",
+        "Business Plan Development",
+        "Feasibility Studies",
+        "Partnership Matching"
+      ]
+    },
+    "venture_building": {
+      "title": "Venture Building",
+      "items": [
+        "Incubation & Acceleration",
+        "Seed Investment",
+        "Go-to-Market Strategy",
+        "Team Building"
+      ]
+    }
+  },
+  "service_scenarios": {
+    "scenarios": {
+      "scenario1": {
+        "title": "Cross-border M&A",
+        "description": "We assist a Chinese tourism group in acquiring a European hotel chain, navigating complex legal and cultural differences to a successful close."
+      },
+      "scenario2": {
+        "title": "Venture Capital Financing",
+        "description": "We help a sustainable energy startup secure Series A funding from a consortium of international investors, enabling them to scale up their innovative technology."
+      },
+      "scenario3": {
+        "title": "Strategic Partnership",
+        "description": "We facilitate a strategic partnership between a US-based wellness brand and a leading Asian distributor, opening up new markets and growth opportunities."
+      }
+    }
+  },
+  "sustainable_value_chain": {
+    "intro": "We invest in and advise companies that are building a more sustainable future. Our focus is on creating a circular economy and reducing the environmental impact of industries.",
+    "items": {
+      "item1": {
+        "title": "Clean Energy",
+        "description": "Investing in renewable energy sources like solar, wind, and hydro to power a cleaner future."
+      },
+      "item2": {
+        "title": "Decarbonization",
+        "description": "Supporting technologies and strategies that reduce carbon emissions across various sectors."
+      },
+      "item3": {
+        "title": "Green Construction",
+        "description": "Promoting sustainable building materials and energy-efficient construction practices."
+      },
+      "item4": {
+        "title": "Circular Economy",
+        "description": "Backing companies that design products for reuse, repair, and recycling, minimizing waste."
+      },
+      "item5": {
+        "title": "Sustainable Agriculture",
+        "description": "Investing in innovative farming techniques that protect biodiversity and conserve resources."
+      },
+      "item6": {
+        "title": "Water Conservation",
+        "description": "Supporting solutions that address water scarcity and improve water management."
+      }
+    }
+  },
+  "about_us": {
+    "mission": {
+      "title": "Our Mission",
+      "description": "To be a leading ecosystem investment bank, creating value for the entire industry ecosystem and its key stakeholders, rather than just focusing on M&A transactions."
+    },
+    "team": {
+      "title": "Our Team",
+      "members": {
+        "member1": {
+          "name": "John Doe",
+          "role": "Founder & CEO"
+        },
+        "member2": {
+          "name": "Jane Smith",
+          "role": "Managing Partner"
+        },
+        "member3": {
+          "name": "Peter Jones",
+          "role": "Head of Advisory"
+        }
+      }
+    }
+  },
+  "contact_us": {
+    "get_in_touch": "Get in Touch",
+    "address": "Address",
+    "email": "Email",
+    "phone": "Phone",
+    "send_message": "Send us a Message",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "submit": "Submit"
+    }
+  },
+  "page_titles": {
+    "home": "Home",
+    "about_us": "About Us",
+    "contact_us": "Contact Us",
+    "core_services": "Core Services",
+    "service_scenarios": "Service Scenarios",
+    "sustainable_value_chain": "Sustainable Value Chain",
+    "happiness_industry_chain": "Happiness Industry Chain"
+  },
+  "happiness_industry_chain": {
+    "intro": "Investing in the happiness industry chain, including travel, leisure, wellness, and entertainment."
+  }
+}
