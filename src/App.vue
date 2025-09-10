@@ -41,8 +41,8 @@ const mainContentStyle = computed(() => {
     };
   }
   return {
-    paddingTop: '74px',
-    minHeight: 'calc(100vh - 74px - 70px)'
+    paddingTop: '105px',
+    minHeight: 'calc(100vh - 105px - 70px)'
   };
 });
 

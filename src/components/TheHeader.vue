@@ -52,23 +52,30 @@ const switchLanguage = (lang) => {
 <style scoped>
 .main-header {
   display: flex;
-  justify-content: space-between; /* Positions logo and controls at opposite ends */
+  justify-content: space-between;
   align-items: center;
-  height: 74px;
-  padding: 0 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
+  height: 105px; /* New fixed height */
+  padding: 0 2rem;
+  background-color: #ffffff; /* Solid white background */
   color: #333;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  transition: background-color 0.3s, height 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); /* Subtle shadow */
+  transition: background-color 0.3s;
+}
+
+/* Transparent header for scrolled-to-top homepage */
+.main-header.transparent-header {
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .logo img {
-  height: 30px; /* Smaller logo for mobile-first */
+  height: 50px; /* Appropriate logo size for mobile */
+  width: auto;
   object-fit: contain;
 }
 
@@ -104,7 +111,7 @@ const switchLanguage = (lang) => {
 .controls {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .lang-switcher {
@@ -159,7 +166,7 @@ const switchLanguage = (lang) => {
   flex-direction: column;
   background-color: #fff;
   position: fixed;
-  top: 74px; /* Below header */
+  top: 105px; /* Match new header height */
   left: 0;
   right: 0;
   transform: translateX(100%);
@@ -184,23 +191,21 @@ const switchLanguage = (lang) => {
 /* Desktop styles */
 @media (min-width: 992px) {
   .main-header {
-    height: 90px;
-    padding: 0 2rem;
+    padding: 0 100px; /* Adjust side padding */
   }
 
   .logo img {
-    height: 40px; /* Larger logo for desktop */
+    width: 326px;
+    height: 88px;
   }
 
   .main-nav {
-    display: flex; /* Show desktop nav */
-    margin: 0 auto; /* Center the nav */
-    padding-left: 100px; /* Offset for logo space */
-    padding-right: 100px; /* Offset for controls space */
+    display: flex;
+    margin: 0 auto;
   }
 
   .mobile-nav-toggle {
-    display: none; /* Hide hamburger */
+    display: none;
   }
 
   .mobile-nav {
