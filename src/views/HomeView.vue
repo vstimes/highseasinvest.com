@@ -2,7 +2,8 @@
   <div>
     <!-- Hero Section -->
     <section class="hero">
-      <div v-if="!videoFailed" class="video-container">
+      <!-- Desktop Video -->
+      <div v-if="!isMobile" class="video-container">
         <video 
           ref="videoPlayer" 
           :poster="videoCover" 
@@ -16,6 +17,7 @@
           <source src="@/assets/home-banner.mp4" type="video/mp4">
         </video>
       </div>
+      <!-- Mobile Image -->
       <div v-else class="hero-background-image"></div>
 
       <div class="hero-overlay">
@@ -58,28 +60,38 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import videoCover from '@/assets/index-video-cover.jpg';
 
 const videoPlayer = ref(null);
 const videoFailed = ref(false);
+const isMobile = ref(false);
 
 const handleVideoError = () => {
   videoFailed.value = true;
 };
 
+const checkScreenSize = () => {
+  isMobile.value = window.innerWidth < 768;
+};
+
 onMounted(() => {
+  checkScreenSize();
+  window.addEventListener('resize', checkScreenSize);
+
   if (videoPlayer.value) {
     const promise = videoPlayer.value.play();
     if (promise !== undefined) {
       promise.catch(error => {
         console.error("Video autoplay was prevented:", error);
-        // Autoplay was prevented. The poster image will be shown.
-        // We can also set videoFailed to true to show the fallback image.
         videoFailed.value = true;
       });
     }
   }
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', checkScreenSize);
 });
 </script>
 
@@ -94,7 +106,7 @@ onMounted(() => {
   background-color: #000; /* Fallback background color */
 }
 
-.video-container, .hero-video {
+.video-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -103,6 +115,8 @@ onMounted(() => {
 }
 
 .hero-video {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -131,7 +145,7 @@ onMounted(() => {
 }
 
 .hero-content {
-  max-width: 900px;
+  max-width: 800px;
   padding: 0 1rem;
 }
 
@@ -161,6 +175,7 @@ onMounted(() => {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .founder-section p {
@@ -211,7 +226,7 @@ onMounted(() => {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 767px) { /* Changed to 767px to match JS */
   .hero-content h1 {
     font-size: 2rem;
   }
