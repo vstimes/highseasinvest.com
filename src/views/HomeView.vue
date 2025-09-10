@@ -161,7 +161,6 @@ onMounted(() => {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
-  text-align: center;
 }
 
 .founder-section p {
