@@ -4,7 +4,7 @@
       <p class="banner-text">{{ $t('about_us.banner_text') }}</p>
     </div>
     <div class="container">
-      <section class="core-members-section">
+      <section class="feature-section">
         <div class="image-container">
           <img src="@/assets/core-members.avif" alt="Core Members">
         </div>
@@ -20,6 +20,17 @@
         <blockquote>
           <p>{{ $t('about_us.keywords.text') }}</p>
         </blockquote>
+      </section>
+
+      <section class="feature-section">
+        <div class="text-container">
+          <h2>{{ $t('about_us.advisors.title') }}</h2>
+          <p>{{ $t('about_us.advisors.p1') }}</p>
+          <p>{{ $t('about_us.advisors.p2') }}</p>
+        </div>
+        <div class="image-container">
+          <img src="@/assets/Advisors & Collaborators.avif" alt="Advisors & Collaborators">
+        </div>
       </section>
     </div>
   </div>
@@ -63,12 +74,11 @@ const { t } = useI18n();
   font-size: 2rem;
   font-weight: bold;
   z-index: 2;
-  width: 900px;
+  max-width: 900px;
   margin: 0 auto;
   line-height: 1.7;
   color: #000;
   white-space: pre-line;
-  text-align: left;
 }
 
 .container {
@@ -77,20 +87,26 @@ const { t } = useI18n();
   padding: 0 2rem;
 }
 
-.core-members-section {
+.feature-section {
   display: flex;
   gap: 2rem;
   align-items: center;
+  margin-top: 4rem;
 }
 
 .image-container {
-  flex-shrink: 0;
+  flex: 1;
 }
 
 .image-container img {
-  width: 363px;
-  height: 387px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
+  border-radius: 8px;
+}
+
+.text-container {
+  flex: 1;
 }
 
 .text-container h2 {
@@ -143,7 +159,6 @@ const { t } = useI18n();
   opacity: 0.1;
 }
 
-
 .keywords-section blockquote p {
   position: relative;
   z-index: 1;
@@ -156,12 +171,14 @@ const { t } = useI18n();
   .container {
     margin: 2rem auto;
   }
-  .core-members-section {
+  .feature-section {
     flex-direction: column;
   }
-  .image-container img {
-    width: 100%;
-    height: auto;
+  .feature-section .text-container {
+    order: 2;
+  }
+  .feature-section .image-container {
+    order: 1;
   }
 }
 </style>
