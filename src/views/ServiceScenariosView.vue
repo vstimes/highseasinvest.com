@@ -1,118 +1,93 @@
 <template>
   <div class="service-scenarios">
-    <div class="banner">
-      <img src="@/assets/seervice-senarios-banner.avif" alt="Service Scenarios Banner">
-      <h1>{{ $t('page_titles.service_scenarios') }}</h1>
-    </div>
-
     <div class="container">
-      <!-- English Layout -->
-      <template v-if="$i18n.locale === 'en'">
-        <section class="scenario-section">
-          <div class="section-header">
-            <div class="section-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="48" height="48">
-                <path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.13,5.12L18.88,8.87M3,17.25V21H6.75L17.81,9.94L14.06,6.19L3,17.25Z" />
-              </svg>
-            </div>
-            <h2 class="section-title">{{ $t('service_scenarios.overseas_companies.title') }}</h2>
+      <section
+        v-for="section in sections"
+        :key="section.id"
+        class="scenario-section"
+        
+      >
+        <div
+          style="
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+            margin-bottom: 5rem;
+          "
+          :class="{ reverse: section.reverseLayout }"
+        >
+          <div class="content-image">
+            <img :src="section.image" :alt="$t(section.titleKey)" />
           </div>
-          <div class="section-content reverse">
-            <div class="content-image">
-              <img src="@/assets/service-scenarios-pic2.avif" alt="For Overseas Companies">
-            </div>
-            <div class="content-text">
-              <div class="service-grid">
-                <div class="service-card" v-for="(service, index) in $tm('service_scenarios.overseas_companies.services')" :key="index">
-                  <h3>{{ service.title }}</h3>
-                  <p>{{ service.description }}</p>
-                </div>
+          <div class="content-details">
+            <div class="section-header">
+              <div class="section-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="40"
+                  height="40"
+                >
+                  <path
+                    d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.13,5.12L18.88,8.87M3,17.25V21H6.75L17.81,9.94L14.06,6.19L3,17.25Z"
+                  />
+                </svg>
               </div>
+              <h2 class="section-title">{{ $t(section.titleKey) }}</h2>
             </div>
           </div>
-        </section>
-
-        <section class="scenario-section">
-          <div class="section-header">
-            <div class="section-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="48" height="48">
-                <path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.13,5.12L18.88,8.87M3,17.25V21H6.75L17.81,9.94L14.06,6.19L3,17.25Z" />
-              </svg>
-            </div>
-            <h2 class="section-title">{{ $t('service_scenarios.chinese_companies.title') }}</h2>
+        </div>
+        <div class="service-grid">
+          <div
+            class="service-card"
+            v-for="(service, index) in $tm(section.servicesKey)"
+            :key="index"
+          >
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
           </div>
-          <div class="section-content">
-            <div class="content-image">
-              <img src="@/assets/service-scenarios-pic1.avif" alt="For Chinese Companies">
-            </div>
-            <div class="content-text">
-              <div class="service-grid">
-                <div class="service-card" v-for="(service, index) in $tm('service_scenarios.chinese_companies.services')" :key="index">
-                  <h3>{{ service.title }}</h3>
-                  <p>{{ service.description }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </template>
-
-      <!-- Chinese Layout -->
-      <template v-else>
-        <section class="scenario-section">
-          <div class="section-header">
-            <div class="section-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="48" height="48">
-                <path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.13,5.12L18.88,8.87M3,17.25V21H6.75L17.81,9.94L14.06,6.19L3,17.25Z" />
-              </svg>
-            </div>
-            <h2 class="section-title">{{ $t('service_scenarios.chinese_companies.title') }}</h2>
-          </div>
-          <div class="section-content">
-            <div class="content-image">
-              <img src="@/assets/service-scenarios-pic1.avif" alt="针对中国企业的服务">
-            </div>
-            <div class="content-text">
-              <div class="service-grid">
-                <div class="service-card" v-for="(service, index) in $tm('service_scenarios.chinese_companies.services')" :key="index">
-                  <h3>{{ service.title }}</h3>
-                  <p>{{ service.description }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="scenario-section">
-          <div class="section-header">
-            <div class="section-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="48" height="48">
-                <path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.13,5.12L18.88,8.87M3,17.25V21H6.75L17.81,9.94L14.06,6.19L3,17.25Z" />
-              </svg>
-            </div>
-            <h2 class="section-title">{{ $t('service_scenarios.overseas_companies.title') }}</h2>
-          </div>
-          <div class="section-content reverse">
-            <div class="content-image">
-              <img src="@/assets/service-scenarios-pic2.avif" alt="针对海外企业的服务">
-            </div>
-            <div class="content-text">
-              <div class="service-grid">
-                <div class="service-card" v-for="(service, index) in $tm('service_scenarios.overseas_companies.services')" :key="index">
-                  <h3>{{ service.title }}</h3>
-                  <p>{{ service.description }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </template>
+        </div>
+      </section>
     </div>
   </div>
 </template>
 
 <script setup>
-// No script needed for this structure as we are using $tm directly in the template
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+// Image assets
+import pic1 from "@/assets/service-scenarios-pic1.avif";
+import pic2 from "@/assets/service-scenarios-pic2.avif";
+
+const { locale } = useI18n();
+
+const sectionsData = {
+  chinese: {
+    id: "chinese",
+    titleKey: "service_scenarios.chinese_companies.title",
+    servicesKey: "service_scenarios.chinese_companies.services",
+    image: pic1,
+    reverseLayout: false, // Image on the left
+  },
+  overseas: {
+    id: "overseas",
+    titleKey: "service_scenarios.overseas_companies.title",
+    servicesKey: "service_scenarios.overseas_companies.services",
+    image: pic2,
+    reverseLayout: true, // Image on the right
+  },
+};
+
+const sections = computed(() => {
+  if (locale.value === "zh") {
+    // Chinese layout: Chinese companies first, then Overseas
+    return [sectionsData.chinese, sectionsData.overseas];
+  }
+  // English (and default) layout: Overseas first, then Chinese
+  return [sectionsData.overseas, sectionsData.chinese];
+});
 </script>
 
 <style scoped>
@@ -148,54 +123,49 @@
 }
 
 .scenario-section {
-  margin-bottom: 5rem;
 }
 
-.section-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.section-icon {
-  color: #003366;
-  margin-bottom: 1rem;
-  border: 2px solid #003366;
-  border-radius: 5px;
-  padding: 5px;
-  display: inline-block;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #003366;
-}
-
-.section-content {
-  display: flex;
-  gap: 3rem;
-  align-items: flex-start;
-}
-
-.section-content.reverse {
+.scenario-section.reverse {
   flex-direction: row-reverse;
 }
 
 .content-image {
   flex: 1;
+  margin-top: 1rem; /* Align image with text block */
 }
 
 .content-image img {
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.content-text {
+.content-details {
   flex: 1;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: row; /* Icon and title on the same row */
+  align-items: center; /* Vertically align icon and title */
+  margin-bottom: 2rem;
+  gap: 1rem; /* Space between icon and title */
+}
+
+.section-icon {
+  color: #003366;
+  border: 2px solid #003366;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex; /* Use flex to center icon inside */
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #003366;
 }
 
 .service-grid {
@@ -208,13 +178,14 @@
   background-color: #f8f9fa;
   padding: 1.5rem;
   border-radius: 8px;
-  border: 1px solid #e9ecef;
+  border: 1px solid #ced4da; /* Made border more visible */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* Make cards in the same row equal height */
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .service-card h3 {
@@ -230,11 +201,13 @@
 }
 
 @media (max-width: 992px) {
-  .section-content, .section-content.reverse {
+  .scenario-section,
+  .scenario-section.reverse {
     flex-direction: column;
   }
   .content-image {
     margin-bottom: 2rem;
+    margin-top: 0;
   }
 }
 
@@ -245,6 +218,11 @@
   .container {
     margin: 2rem auto;
     padding: 0 1rem;
+  }
+  .section-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   .section-title {
     font-size: 2rem;
