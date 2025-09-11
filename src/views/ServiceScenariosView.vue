@@ -5,7 +5,7 @@
         v-for="section in sections"
         :key="section.id"
         class="scenario-section"
-        
+        style="margin-bottom: 6rem"
       >
         <div
           style="
