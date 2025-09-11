@@ -74,11 +74,12 @@ const { t } = useI18n();
   font-size: 2rem;
   font-weight: bold;
   z-index: 2;
-  max-width: 900px;
+  width: 900px;
   margin: 0 auto;
   line-height: 1.7;
   color: #000;
   white-space: pre-line;
+  text-align: left;
 }
 
 .container {
