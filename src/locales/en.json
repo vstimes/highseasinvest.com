@@ -70,19 +70,47 @@
     }
   },
   "service_scenarios": {
-    "scenarios": {
-      "scenario1": {
-        "title": "Cross-border M&A",
-        "description": "We assist a Chinese tourism group in acquiring a European hotel chain, navigating complex legal and cultural differences to a successful close."
-      },
-      "scenario2": {
-        "title": "Venture Capital Financing",
-        "description": "We help a sustainable energy startup secure Series A funding from a consortium of international investors, enabling them to scale up their innovative technology."
-      },
-      "scenario3": {
-        "title": "Strategic Partnership",
-        "description": "We facilitate a strategic partnership between a US-based wellness brand and a leading Asian distributor, opening up new markets and growth opportunities."
-      }
+    "overseas_companies": {
+      "title": "For Overseas Companies",
+      "services": [
+        {
+          "title": "If you are an overseas corporate (or its investor) looking for Asia expansion",
+          "description": "We can assist in identifying suitable growth opportunities in the region for you. We can provide you with strategic growth solutions, including: greenfield investment, JV partner/investor/representation search & greater China Company set up."
+        },
+        {
+          "title": "If you are an overseas investment bank/FA or consulting firm",
+          "description": "We can assist your client in identifying the most relevant M&A target (buy-side) or JV partner in Asia. We can execute a co-mandate to search for overseas financial and strategic buyers in an M&A sell-side process."
+        },
+        {
+          "title": "If you are an overseas Limited Partner",
+          "description": "We can assist you in planning your capital deployment in China and even across Asia. We provide comprehensive services including investment strategy and portfolio feedback, investment agreements, fund allocation, investment due diligence, and post-investment management. Additionally, leveraging our deep understanding of the industry chain, we can match you with excellent funds and targeted investments in both the happiness and sustainable industries to meet your specific needs."
+        },
+        {
+          "title": "If you are an overseas investment fund",
+          "description": "We can assist your portfolio companies for its China/Asia development through various forms: roll-up, JV partnership, co-investments and divestment. We are also open to collaborating with you on investment projects."
+        }
+      ]
+    },
+    "chinese_companies": {
+      "title": "For Chinese Companies",
+      "services": [
+        {
+          "title": "If you are a Chinese corporate (or its investor)",
+          "description": "We can assist you on fund raising and M&A (buy-side and sell-side) in China and beyond. For your international expansion, we can provide strategic asset acquisition/roll-up (leveraged with bank financing, JV partner/investor search, greater China/overseas entity set up), as well as European company set up."
+        },
+        {
+          "title": "If you are a Chinese investment fund",
+          "description": "We can assist in identifying overseas direct investment opportunities for you, or we can help portfolio companies' overseas development through various forms: roll-up, JV partnership, co-investments and divestment."
+        },
+        {
+          "title": "If you are a Chinese investment bank/FA or consulting firm",
+          "description": "We can assist your client in identifying the most relevant M&A target (buy-side) or JV partner in Europe and beyond. We can execute a co-mandate to search for overseas strategic buyers in an M&A sell-side process."
+        },
+        {
+          "title": "If you are a Chinese real estate developer/investor/destination government",
+          "description": "We can assist in creating suitable and comprehensive “content” (international IP, well-known operating brands), to help you create destination, points of interest, and services holistically combined. We can also bring you cutting-edge companies in clean energy, green building, or other technologies to help you explore new growth opportunities."
+        }
+      ]
     }
   },
   "sustainable_value_chain": {
