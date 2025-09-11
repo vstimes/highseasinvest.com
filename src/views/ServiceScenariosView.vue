@@ -5,14 +5,12 @@
         v-for="section in sections"
         :key="section.id"
         class="scenario-section"
-        style="margin-bottom: 6rem"
       >
         <div
           style="
             display: flex;
             gap: 3rem;
             align-items: center;
-            margin-bottom: 5rem;
           "
           :class="{ reverse: section.reverseLayout }"
         >
@@ -95,27 +93,6 @@ const sections = computed(() => {
   color: #333;
 }
 
-.banner {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-.banner img {
-  width: 100%;
-  height: 50vh;
-  object-fit: cover;
-}
-
-.banner h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3rem;
-  font-weight: bold;
-}
-
 .container {
   max-width: 1200px;
   margin: 4rem auto;
@@ -123,15 +100,15 @@ const sections = computed(() => {
 }
 
 .scenario-section {
+    margin-bottom: 5rem;
 }
 
-.scenario-section.reverse {
+.scenario-section .reverse {
   flex-direction: row-reverse;
 }
 
 .content-image {
   flex: 1;
-  margin-top: 1rem; /* Align image with text block */
 }
 
 .content-image img {
@@ -146,9 +123,9 @@ const sections = computed(() => {
 
 .section-header {
   display: flex;
-  flex-direction: column; /* Icon and title on the same row */
-  align-items: center; /* Vertically align icon and title */
-  margin-bottom: 2rem;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
@@ -157,10 +134,10 @@ const sections = computed(() => {
   border: 2px solid #003366;
   border-radius: 5px;
   padding: 5px;
-  display: flex; /* Use flex to center icon inside */
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem; /* Space between icon and title */
+  margin-bottom: 1rem;
 }
 
 .section-title {
@@ -172,16 +149,17 @@ const sections = computed(() => {
 .service-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem  2rem;
+  gap: 5rem 2rem;
+  margin-top: 3rem;
 }
 
 .service-card {
   background-color: #f8f9fa;
   padding: 1.5rem;
   border-radius: 8px;
-  border: 1px solid #ced4da; /* Made border more visible */
+  border: 1px solid #ced4da;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%; /* Make cards in the same row equal height */
+  height: 100%;
 }
 
 .service-card:hover {
@@ -202,28 +180,19 @@ const sections = computed(() => {
 }
 
 @media (max-width: 992px) {
-  .scenario-section,
-  .scenario-section.reverse {
+  .scenario-section > div[style] {
     flex-direction: column;
+    align-items: stretch !important; /* Override inline style */
   }
   .content-image {
-    margin-bottom: 2rem;
-    margin-top: 0;
+      margin-bottom: 3rem;
   }
 }
 
 @media (max-width: 768px) {
-  .banner h1 {
-    font-size: 2rem;
-  }
   .container {
     margin: 2rem auto;
     padding: 0 1rem;
-  }
-  .section-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
   .section-title {
     font-size: 2rem;
