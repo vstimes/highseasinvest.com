@@ -11,7 +11,7 @@
           style="
             display: flex;
             gap: 3rem;
-            align-items: flex-start;
+            align-items: center;
             margin-bottom: 5rem;
           "
           :class="{ reverse: section.reverseLayout }"
