@@ -172,7 +172,7 @@ const sections = computed(() => {
 .service-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 5rem  2rem;
 }
 
 .service-card {
