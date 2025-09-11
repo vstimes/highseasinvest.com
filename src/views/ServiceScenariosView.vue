@@ -146,10 +146,10 @@ const sections = computed(() => {
 
 .section-header {
   display: flex;
-  flex-direction: row; /* Icon and title on the same row */
+  flex-direction: column; /* Icon and title on the same row */
   align-items: center; /* Vertically align icon and title */
   margin-bottom: 2rem;
-  gap: 1rem; /* Space between icon and title */
+  text-align: center;
 }
 
 .section-icon {
@@ -160,6 +160,7 @@ const sections = computed(() => {
   display: flex; /* Use flex to center icon inside */
   align-items: center;
   justify-content: center;
+  margin-bottom: 1rem; /* Space between icon and title */
 }
 
 .section-title {
