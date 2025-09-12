@@ -5,10 +5,9 @@
     "services": "Service Scenarios",
     "core": "Core Services",
     "ecosystems": "Ecosystems",
-    "contact": "Contact"
-      ,
-      "happinessIndustryChain": "Happiness Industry Chain",
-      "sustainableValueChain": "Sustainable Value Chain"
+    "contact": "Contact",
+    "happinessIndustryChain": "Happiness Industry Chain",
+    "sustainableValueChain": "Sustainable Value Chain"
   },
   "page_titles": {
     "home": "Home",
@@ -213,14 +212,32 @@
       "areYou": {
         "label": "Are you ...",
         "options": [
-          { "key": "areYou1", "label": "an overseas corporate (or its investor)" },
+          {
+            "key": "areYou1",
+            "label": "an overseas corporate (or its investor)"
+          },
           { "key": "areYou2", "label": "an overseas investment fund" },
-          { "key": "areYou3", "label": "an overseas investment bank/FA or a consulting firm" },
-          { "key": "areYou4", "label": "a Chinese corporate (or its investor)" },
-          { "key": "areYou5", "label": "a Chinese real estate developer/investor/destination government" },
+          {
+            "key": "areYou3",
+            "label": "an overseas investment bank/FA or a consulting firm"
+          },
+          {
+            "key": "areYou4",
+            "label": "a Chinese corporate (or its investor)"
+          },
+          {
+            "key": "areYou5",
+            "label": "a Chinese real estate developer/investor/destination government"
+          },
           { "key": "areYou6", "label": "a Chinese investment fund" },
-          { "key": "areYou7", "label": "a Chinese investment bank/FA/consulting firm" },
-          { "key": "areYou8", "label": "looking for full-time/internship opportunity" },
+          {
+            "key": "areYou7",
+            "label": "a Chinese investment bank/FA/consulting firm"
+          },
+          {
+            "key": "areYou8",
+            "label": "looking for full-time/internship opportunity"
+          },
           { "key": "areYou9", "label": "Others" }
         ]
       },
@@ -266,6 +283,71 @@
     "happiness_industry_chain": "Happiness Industry Chain"
   },
   "happiness_industry_chain": {
-    "intro": "Investing in the happiness industry chain, including travel, leisure, wellness, and entertainment."
+    "tourism": {
+      "title": "Full Tourism Industry Chain: Service · Distribution · Technology · Marketing",
+      "list1": [
+        "Travel B2B, Distribution & Wholesale",
+        "Air Ticket Consolidator & Technology",
+        "Transportation and Train Ticket Consolidator & Technology",
+        "Offline Travel Agency Consortium",
+        "Travel Technology",
+        "Travel Channel of the SuperApp",
+        "Large Destination Management Company/Last-mile Service Provider",
+        "Luxury Travel Agency & Network"
+      ],
+      "list2": [
+        "Bedbank",
+        "Attraction Consolidator",
+        "Tours & Activities Consolidator & Technology",
+        "Online Travel Agency",
+        "Business/Corporate Travel",
+        "M. I. C. E.",
+        "Destination Marketing Agency",
+        "Alternative Accommodation"
+      ]
+    },
+    "hospitality": {
+      "title": "Hospitality & Leisure: Family Vacation · Play · Sports · Learning",
+      "list1": [
+        "Vacation Property",
+        "Family Resort/Kids Friendly Hotel",
+        "Immersive Multimedia Show/Performance",
+        "Indoor & Outdoor Animal, Botanic & Eco Park",
+        "European Rural Tourism & Farm Resort",
+        "Ski Resort & Water Sports Operator",
+        "BNB Operator",
+        "Glamping Destination"
+      ],
+      "list2": [
+        "Amusement Park/FEC/ Indoor Playground",
+        "Indoor & Outdoor Waterpark",
+        "International School & New Self-development Organization",
+        "Theme Parks & Famous Attraction",
+        "Innovative & Art Educational Service Provider",
+        "Specialty & Themed Culinary Arts Brand",
+        "Specialty & Themed Culinary Arts Education Service Provider",
+        "Other Professional Education Provider"
+      ]
+    },
+    "wellness": {
+      "title": "Wellness & Eldercare: Balance · Prevention · Healing · Senior Living",
+      "list1": [
+        "Mind, Body & Spirituality Retreat",
+        "Nutrition Therapy",
+        "Alternative Medical Center",
+        "Hot Spring Resort/European SPA",
+        "High-end Eldercare Service Provider"
+      ],
+      "list2": [
+        "Holistic Medical Center",
+        "Health & Wellness Resort",
+        "Functional Medicine Clinic",
+        "Thalassotherapy Hotel",
+        "High-end Senior Living Community"
+      ]
+    },
+    "partners": {
+      "title": "Strategic Partners & Select Clients"
+    }
   }
 }
