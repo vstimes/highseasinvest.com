@@ -9,9 +9,9 @@
       <router-link to="/about">{{ $t("nav.about") }}</router-link>
       <router-link to="/service-scenarios">{{ $t("nav.services") }}</router-link>
       <router-link to="/core-services">{{ $t("nav.core") }}</router-link>
-      <div class="nav-dropdown" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
-        <span class="nav-dropdown-label" :class="{ active: dropdownOpen }">{{ $t("nav.ecosystems") }}</span>
-        <div class="nav-dropdown-menu" style="text-align: right;padding:10px 10px;">
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-label">{{ $t("nav.ecosystems") }}</span>
+        <div class="nav-dropdown-menu">
           <router-link to="/happiness-industry-chain">{{ $t("nav.happinessIndustryChain") }}</router-link>
           <router-link to="/sustainable-value-chain">{{ $t("nav.sustainableValueChain") }}</router-link>
         </div>
@@ -21,7 +21,7 @@
 
     <div class="controls">
       <div class="lang-switcher">
-        <button @click="switchLanguage('zh')" :class="{ active: $i18n.locale === 'zh' }">ZH</button>
+        <button @click="switchLanguage('zh')" :class="{ active: $i18n.locale === 'zh' }">中</button>
         <span class="separator"></span>
         <button @click="switchLanguage('en')" :class="{ active: $i18n.locale === 'en' }">EN</button>
       </div>
@@ -38,8 +38,11 @@
     <router-link to="/about" @click="mobileNavOpen = false">{{ $t("nav.about") }}</router-link>
     <router-link to="/service-scenarios" @click="mobileNavOpen = false">{{ $t("nav.services") }}</router-link>
     <router-link to="/core-services" @click="mobileNavOpen = false">{{ $t("nav.core") }}</router-link>
-    <div class="mobile-nav-dropdown">
-      <span class="mobile-nav-dropdown-label">{{ $t("nav.ecosystems") }}</span>
+    <div class="mobile-nav-dropdown" :class="{ open: ecosystemDropdownOpen }">
+      <span class="mobile-nav-dropdown-label" @click="ecosystemDropdownOpen = !ecosystemDropdownOpen">
+        {{ $t("nav.ecosystems") }}
+        <span class="indicator"></span>
+      </span>
       <div class="mobile-nav-dropdown-menu">
         <router-link to="/happiness-industry-chain" @click="mobileNavOpen = false">{{ $t("nav.happinessIndustryChain") }}</router-link>
         <router-link to="/sustainable-value-chain" @click="mobileNavOpen = false">{{ $t("nav.sustainableValueChain") }}</router-link>
@@ -55,6 +58,7 @@ import { useI18n } from "vue-i18n";
 
 const { locale } = useI18n();
 const mobileNavOpen = ref(false);
+const ecosystemDropdownOpen = ref(true);
 
 const switchLanguage = (lang) => {
   locale.value = lang;
@@ -62,7 +66,47 @@ const switchLanguage = (lang) => {
 </script>
 
 <style scoped>
-/* 移动端下拉菜单样式 */
+/* Mobile Dropdown Interaction */
+.mobile-nav-dropdown-label {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.indicator {
+  position: absolute;
+  right: 2rem;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #003366;
+  border-bottom: 2px solid #003366;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav-dropdown.open .indicator {
+  transform: rotate(225deg);
+}
+
+.mobile-nav-dropdown-menu {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  background-color: #f9f9f9; /* Slightly different background for distinction */
+}
+
+.mobile-nav-dropdown.open .mobile-nav-dropdown-menu {
+  display: flex; /* Shown when open */
+}
+
+.mobile-nav-dropdown-menu a {
+  padding: 0.75rem 2rem 0.75rem 3rem; /* Indent sub-items */
+  background-color: #f9f9f9;
+}
+
+/* Original Styles Below */
+
 .mobile-nav-dropdown {
   display: flex;
   flex-direction: column;
@@ -71,24 +115,11 @@ const switchLanguage = (lang) => {
 .mobile-nav-dropdown-label {
   font-weight: 500;
   color: #003366;
-  padding: 1rem 2rem 0.5rem 2rem;
+  padding: 1rem 2rem;
   text-align: center;
 }
-.mobile-nav-dropdown-menu {
-  display: flex;
-  flex-direction: column;
-}
-.mobile-nav-dropdown-menu router-link {
-  padding: 0.5rem 2rem;
-  color: #333;
-  text-decoration: none;
-  border-bottom: 1px solid #eee;
-  text-align: center;
-}
-.mobile-nav-dropdown-menu router-link:last-child {
-  border-bottom: none;
-}
-/* 下拉菜单样式 */
+
+/* Dropdown menu for desktop */
 .nav-dropdown {
   position: relative;
   display: inline-block;
@@ -100,15 +131,14 @@ const switchLanguage = (lang) => {
   padding-bottom: 5px;
   position: relative;
 }
-.nav-dropdown-label.active {
-  color: #003366;
-}
+
 .nav-dropdown-menu {
   display: none;
   position: absolute;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   top: 100%;
-    min-width: max-content;
+  min-width: max-content;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   border-radius: 6px;
@@ -120,14 +150,14 @@ const switchLanguage = (lang) => {
 .nav-dropdown:focus-within .nav-dropdown-menu {
   display: flex;
 }
-.nav-dropdown-menu router-link {
+.nav-dropdown-menu a {
   color: #333;
   text-decoration: none;
   padding: 10px 24px;
   display: block;
   font-size: 1rem;
 }
-.nav-dropdown-menu router-link:hover {
+.nav-dropdown-menu a:hover {
   background: #f7f7f7;
 }
 .main-header {
@@ -147,14 +177,8 @@ const switchLanguage = (lang) => {
   transition: background-color 0.3s;
 }
 
-/* Transparent header for scrolled-to-top homepage */
-.main-header.transparent-header {
-  background-color: transparent;
-  box-shadow: none;
-}
-
 .logo img {
-  height: 50px; /* Appropriate logo size for mobile */
+  height: 50px;
   width: auto;
   object-fit: contain;
 }
@@ -297,3 +321,4 @@ const switchLanguage = (lang) => {
   }
 }
 </style>
+
