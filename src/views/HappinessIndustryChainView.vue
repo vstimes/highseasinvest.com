@@ -20,6 +20,9 @@
 
     <!-- Hospitality & Leisure -->
     <section class="content-section reverse">
+      <div class="image-container">
+        <img src="@/assets/ecosystems-huaxueavif.avif" alt="Skiing">
+      </div>
       <div class="text-container">
         <h3>{{ $t('happiness_industry_chain.hospitality.title') }}</h3>
         <div class="lists-wrapper">
@@ -31,9 +34,7 @@
           </ul>
         </div>
       </div>
-      <div class="image-container">
-        <img src="@/assets/ecosystems-huaxueavif.avif" alt="Skiing">
-      </div>
+      
     </section>
 
     <!-- Wellness & Eldercare -->
@@ -191,18 +192,16 @@ const { t, tm } = useI18n();
     flex-direction: column;
   }
 
-  .text-container.with-border-right,
-  .text-container.with-border-left {
-    border: none; /* Remove vertical borders on mobile */
+  .content-section .image-container,
+  .content-section.reverse .image-container {
+    order: 0;
   }
-
-  .text-container {
-     border-top: 1px solid #000; /* Add horizontal border */
-  }
-
+  .content-section .text-container,
   .content-section.reverse .text-container {
-    border-top: 1px solid #000; /* Ensure border is always on top of text */
-    order: -1; /* Move text above image */
+    order: 1;
+    border-top: 1px solid #000;
+    border-right: none;
+    border-left: none;
   }
 }
 
