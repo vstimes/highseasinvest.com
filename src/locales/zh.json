@@ -201,16 +201,56 @@
     }
   },
   "contact_us": {
-    "get_in_touch": "联系我们",
-    "address": "地址",
-    "email": "邮箱",
-    "phone": "电话",
-    "send_message": "给我们留言",
+    "banner_text": "相互联结\n相互发现",
     "form": {
-      "name": "您的姓名",
-      "email": "您的邮箱",
-      "message": "您的留言",
-      "submit": "提交"
+      "fullName": "姓名",
+      "email": "Email",
+      "organization": "机构",
+      "position": "职位",
+      "areYou": {
+        "label": "请问您是...",
+        "options": [
+          { "key": "areYou1", "label": "有意在亚洲进行扩张的海外企业（或其投资人）" },
+          { "key": "areYou2", "label": "海外投资基金" },
+          { "key": "areYou3", "label": "海外投行/财务顾问/咨询公司" },
+          { "key": "areYou4", "label": "中国企业（或其投资方）" },
+          { "key": "areYou5", "label": "中国房地产开发商/投资商/目的地政府" },
+          { "key": "areYou6", "label": "中国投资基金" },
+          { "key": "areYou7", "label": "中国投行/财务顾问/咨询公司" },
+          { "key": "areYou8", "label": "对工作或实习机会感兴趣" },
+          { "key": "areYou9", "label": "其他,请在留言中详述" }
+        ]
+      },
+      "interestedIn": {
+        "label": "您感兴趣的话题是...",
+        "options": [
+          { "key": "interestedIn1", "label": "并购" },
+          { "key": "interestedIn2", "label": "融资" },
+          { "key": "interestedIn3", "label": "战略咨询" },
+          { "key": "interestedIn4", "label": "公司合资、落地、出海" },
+          { "key": "interestedIn5", "label": "其他合作" }
+        ]
+      },
+      "message": "请给我们留言...",
+      "send": "发送消息"
+    },
+    "success": {
+      "title": "感谢您!",
+      "message": "您的消息已成功发送。"
+    },
+    "addresses": {
+      "france": {
+        "title": "法国办公室",
+        "address": "1 rue de Stockholm, 75008, Paris"
+      },
+      "china": {
+        "title": "中国办公室",
+        "address": "北京市海淀区中关村东路1号院3号楼搜狐网络大厦2层"
+      },
+      "hongkong": {
+        "title": "香港办公室",
+        "address": "香港中环皇后大道中108号6楼602室"
+      }
     }
   },
   "happiness_industry_chain": {
