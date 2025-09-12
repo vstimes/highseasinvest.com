@@ -90,6 +90,7 @@ const { t, tm } = useI18n();
   color: #000;
   white-space: pre-line;
   text-align: left;
+  padding-left: 20px;
 }
 
 .container {
