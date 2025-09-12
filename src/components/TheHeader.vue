@@ -9,7 +9,13 @@
       <router-link to="/about">{{ $t("nav.about") }}</router-link>
       <router-link to="/service-scenarios">{{ $t("nav.services") }}</router-link>
       <router-link to="/core-services">{{ $t("nav.core") }}</router-link>
-      <router-link to="/">{{ $t("nav.ecosystems") }}</router-link>
+      <div class="nav-dropdown" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
+        <span class="nav-dropdown-label" :class="{ active: dropdownOpen }">{{ $t("nav.ecosystems") }}</span>
+        <div class="nav-dropdown-menu" style="text-align: right;padding:10px 10px;">
+          <router-link to="/happiness-industry-chain">{{ $t("nav.happinessIndustryChain") }}</router-link>
+          <router-link to="/sustainable-value-chain">{{ $t("nav.sustainableValueChain") }}</router-link>
+        </div>
+      </div>
       <router-link to="/contact">{{ $t("nav.contact") }}</router-link>
     </nav>
 
@@ -50,6 +56,48 @@ const switchLanguage = (lang) => {
 </script>
 
 <style scoped>
+/* 下拉菜单样式 */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.nav-dropdown-label {
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+  padding-bottom: 5px;
+  position: relative;
+}
+.nav-dropdown-label.active {
+  color: #003366;
+}
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 120px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 6px;
+  z-index: 1002;
+  flex-direction: column;
+  padding: 8px 0;
+}
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  display: flex;
+}
+.nav-dropdown-menu router-link {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 24px;
+  display: block;
+  font-size: 1rem;
+}
+.nav-dropdown-menu router-link:hover {
+  background: #f7f7f7;
+}
 .main-header {
   display: flex;
   justify-content: space-between;

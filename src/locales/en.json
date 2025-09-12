@@ -6,6 +6,9 @@
     "core": "Core Services",
     "ecosystems": "Ecosystems",
     "contact": "Contact"
+      ,
+      "happinessIndustryChain": "Happiness Industry Chain",
+      "sustainableValueChain": "Sustainable Value Chain"
   },
   "page_titles": {
     "home": "Home",
