@@ -136,32 +136,74 @@
     }
   },
   "sustainable_value_chain": {
-    "intro": "We invest in and advise companies that are building a more sustainable future. Our focus is on creating a circular economy and reducing the environmental impact of industries.",
-    "items": {
-      "item1": {
-        "title": "Clean Energy",
-        "description": "Investing in renewable energy sources like solar, wind, and hydro to power a cleaner future."
-      },
-      "item2": {
-        "title": "Decarbonization",
-        "description": "Supporting technologies and strategies that reduce carbon emissions across various sectors."
-      },
-      "item3": {
-        "title": "Green Construction",
-        "description": "Promoting sustainable building materials and energy-efficient construction practices."
-      },
-      "item4": {
-        "title": "Circular Economy",
-        "description": "Backing companies that design products for reuse, repair, and recycling, minimizing waste."
-      },
-      "item5": {
-        "title": "Sustainable Agriculture",
-        "description": "Investing in innovative farming techniques that protect biodiversity and conserve resources."
-      },
-      "item6": {
-        "title": "Water Conservation",
-        "description": "Supporting solutions that address water scarcity and improve water management."
-      }
+    "banner_text": "Sustainable Value Chain:\nInvestment, Technology, Implementation, Incubation and Expansion",
+    "sub_nav": [
+      "Clean & Renewable Energy",
+      "Energy Storage Solutions",
+      "Recycle of Regenerated Resources",
+      "Carbon Capture, Utilization, and Storage (CCUS)",
+      "Green Building"
+    ],
+    "partners": {
+      "title": "Strategic Partners & Select Clients",
+      "list": [
+        {
+          "title": "Jingjini National Center of Technology Transfer",
+          "description": "The center is a national-level platform established in collaboration with CITIC Securities Institute, the torch center of the Ministry of Science and Technology, universities & institutes, research institutes, and major innovation enterprises. Its core mission is to build an international technology trading and service platform, and to incubate more disruptive technology innovations, in fields such as new energy, new materials, advanced manufacturing, information tech, etc."
+        },
+        {
+          "title": "Beijing Energy Club",
+          "description": "The Beijing Energy Club is a non-governmental, non-profit organization composed of senior professionals. It serves as a platform for the exchange of ideas among government officials, entrepreneurs, and academic and research experts for in-depth discussion on energy resources, the environment, and climate change. Its mission is to provide advice and suggestions to the government on China’s sustainable energy development, and to share the Chinese experience with other countries."
+        },
+        {
+          "title": "CN Innovation",
+          "description": "CN Innovation was established in 2021 and is a decarbonization and net-zero emission innovative technology platform company with a vision to become a leading global provider of solutions in the new energy and decarbonization market. The company’s strategic shareholders include China’s largest clean energy company, China Yangtze Power, China Three Gorges, Asian Development Bank, International Energy Agency, South Pole, etc. The company has built a strong network of connections within the Asian clean energy manufacturing industry, and has established long-term and close collaboration with businesses and governments worldwide."
+        },
+        {
+          "title": "Guanghe New Energy",
+          "description": "Established in September 2016, Guanghe New Energy is a renewable energy development and investment platform. The company is committed to industrialize the nanoscale junction resonance effect, which can generate electricity in a more efficient, low-energy consumption, and low-cost way, without relying on traditional photovoltaic cells. The company has two main business segments: The company has mastered the core technology and produces nanoscale junction power generation equipment such as generators and battery packs independently..."
+        },
+        {
+          "title": "Jordan Investment Commission",
+          "description": "The Jordan Investment Commission (JIC) is dedicated to advancing and promoting both domestic and foreign investments, and to strengthening Jordan’s local economy. JIC provides comprehensive investment services through its local teams, and by collaborating with government agencies, is responsible to issue Jordan economic citizenship."
+        },
+        {
+          "title": "South Pole",
+          "description": "South Pole, a renowned sustainability and climate change consulting firm that has provided consulting services and carbon asset management for over 700 companies worldwide. In 2021, South Pole’s ‘net zero report,’ and blog post ‘Navigating the nuances of carbon neutrality vs. net-zero’ have been cited by the IPCC. It is also a board member of Climate KIC, Europe’s largest climate change public-private partnership."
+        },
+        {
+          "title": "Gulf Intelligence",
+          "description": "Gulf Intelligence (GI) is a leading strategic communications and research firm for the energy sector. It aims to enhance the thought leadership profile and position of clients as they navigate the global energy transition and a journey to Net Zero. GI is headquartered in Dubai, with over 15 years of operational experience in the GCC and other regions, offering bespoke and strategic advice."
+        },
+        {
+          "title": "China General Certification Center",
+          "description": "Founded in 2002, China General Certification Center (CGC) is a leading third-party technical service organization providing services like standard development, testing, inspection, certification, and technical consulting. Its business covers areas like renewable energy, climate change, industrial energy-saving and emission reduction, etc. With its professional team and extensive experience, CGC has become a well-known brand, aiming to be a global technical service leader and industry enabler."
+        },
+        {
+          "title": "Precast Building Network",
+          "description": "Was established in 2011 and is affiliated with Changzhou Municipal People’s Government. It is one of the most influential and authoritative service platforms in China’s prefabrication construction. The business covers online and offline media, industry research, brand promotion, project promotion, recruitment, and training, among others. Its platform has a strong influence both domestically and internationally, encompassing regions with its nationwide network of branches and offices. As of 2022, it has secured multiple rounds of financing from renowned investment institutions and abundant resources and a global perspective. Precast network provides comprehensive services for the entire industry chain, including real estate, design, enterprises, industry organizations, and individuals."
+        },
+        {
+          "title": "Transblock",
+          "description": "Is a leading Chinese manufacturer of smart assembly-type renovation products, providing one-stop solutions for the renovation of old residential communities. Through independent research and development and standardized production, Transblock has created a series of trusted intelligent assembly-type renovation enterprises, the company has a strong influence both domestically and internationally, encompassing regions with its nationwide network of branches and offices. As of 2022, it has secured multiple rounds of financing from renowned investment institutions, including ZhenFund, Source Code Capital, GGV Capital, and Meituan-Dianping Longzhu Fund."
+        },
+        {
+          "title": "Shanghai Senlin Building Decoration Systems Co., Ltd.",
+          "description": "Is a comprehensive enterprise with research and development, manufacturing, project design, and installation, the company has a strong influence both domestically and internationally, encompassing regions with its nationwide network of branches and offices. As of 2022, it has secured multiple rounds of financing from renowned investment institutions and abundant resources and a global perspective. Senlin integrates lighting, HVAC, fire protection, and intelligent systems into its prefabricated building decoration, and is one of the most influential and authoritative service platforms in the Chinese prefabricated building decoration industry."
+        }
+      ]
+    },
+    "support_unit": {
+      "title": "Support unit",
+      "list": [
+        "Housing and Urban-Rural Development Department-Promoting the Industrialization of Construction Industry Committee",
+        "Sino-Asia International Industrialized Construction Exhibition Organizing Committee",
+        "Steel Structure Branch, China Construction Metal Structure Association",
+        "European Timber Association",
+        "Shenzhen Industrialization Association for Construction",
+        "German International Cooperation Agency (GIZ)-Jiangsu Project Office",
+        "China Architecture Design & Research Institute Co. Ltd."
+      ]
     }
   },
   "about_us": {
