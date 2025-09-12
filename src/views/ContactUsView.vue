@@ -10,7 +10,7 @@
         <p>{{ $t('contact_us.success.message') }}</p>
       </div>
 
-      <form v-else @submit.prevent="handleSubmit">
+      <form v-else @submit.prevent="handleSubmit" style="display: none">
         <div class="form-grid">
           <div class="form-group">
             <label for="fullName">{{ $t('contact_us.form.fullName') }} *</label>
@@ -62,11 +62,6 @@
           <span class="icon"></span>
           <h4>{{ $t('contact_us.addresses.france.title') }}</h4>
           <p v-html="$t('contact_us.addresses.france.address')"></p>
-        </div>
-        <div class="address-item">
-          <span class="icon"></span>
-          <h4>{{ $t('contact_us.addresses.china.title') }}</h4>
-          <p v-html="$t('contact_us.addresses.china.address')"></p>
         </div>
         <div class="address-item">
           <span class="icon"></span>

@@ -186,6 +186,7 @@ const switchLanguage = (lang) => {
 .main-nav {
   display: none; /* Hidden on mobile */
   gap: 2rem;
+  min-width: 640px;
 }
 
 .main-nav a {
