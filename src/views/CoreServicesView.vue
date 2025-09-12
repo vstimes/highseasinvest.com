@@ -1,33 +1,55 @@
 <template>
   <div class="core-services">
     <div class="banner">
-      <img src="@/assets/core-service-banner.avif" alt="Core Services">
-      <h1 style="color:#333">{{ $t('page_titles.core_services') }}</h1>
+      <p class="banner-text">{{ $t('core_services.banner_text') }}</p>
     </div>
     <div class="container">
-      <div class="service-item">
-        <h3>{{ $t('core_services.corporate_finance.title') }}</h3>
-        <ul>
-          <li v-for="item in $t('core_services.corporate_finance.items')" :key="item">{{ item }}</li>
-        </ul>
-      </div>
-      <div class="service-item">
-        <h3>{{ $t('core_services.strategic_advisory.title') }}</h3>
-        <ul>
-          <li v-for="item in $t('core_services.strategic_advisory.items')" :key="item">{{ item }}</li>
-        </ul>
-      </div>
-      <div class="service-item">
-        <h3>{{ $t('core_services.venture_building.title') }}</h3>
-        <ul>
-          <li v-for="item in $t('core_services.venture_building.items')" :key="item">{{ item }}</li>
-        </ul>
+      <div class="service-grid">
+        <div class="service-item">
+          <h3>{{ $t('core_services.investment_incubation.title') }}</h3>
+          <ul>
+            <li v-for="item in tm('core_services.investment_incubation.items')" :key="item">{{ item }}</li>
+          </ul>
+        </div>
+        <div class="service-item">
+          <h3>{{ $t('core_services.strategy_consulting.title') }}</h3>
+          <ul>
+            <li v-for="item in tm('core_services.strategy_consulting.items')" :key="item">{{ item }}</li>
+          </ul>
+        </div>
+        <div class="service-item">
+          <h3>{{ $t('core_services.merger_acquisition.title') }}</h3>
+          <ul>
+            <li v-for="item in tm('core_services.merger_acquisition.items')" :key="item">{{ item }}</li>
+          </ul>
+        </div>
+        <div class="service-item">
+          <h3>{{ $t('core_services.company_globalization.title') }}</h3>
+          <ul>
+            <li v-for="item in tm('core_services.company_globalization.items')" :key="item">{{ item }}</li>
+          </ul>
+        </div>
+        <div class="service-item">
+          <h3>{{ $t('core_services.fund_raising.title') }}</h3>
+          <ul>
+            <li v-for="item in tm('core_services.fund_raising.items')" :key="item">{{ item }}</li>
+          </ul>
+        </div>
+        <div class="service-item">
+          <h3>{{ $t('core_services.destination_strategy.title') }}</h3>
+          <ul>
+            <li v-for="item in tm('core_services.destination_strategy.items')" :key="item">{{ item }}</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t, tm } = useI18n();
 </script>
 
 <style scoped>
@@ -38,38 +60,48 @@
 .banner {
   position: relative;
   text-align: center;
-  color: white;
-}
-
-.banner img {
-  width: 100%;
   height: 50vh;
-  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('@/assets/core-service-banner.avif');
+  background-size: cover;
+  background-position: center;
 }
 
-.banner h1 {
+.banner::after {
+  content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+}
+
+.banner-text {
+  font-size: 2rem;
   font-weight: bold;
+  z-index: 2;
+  width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #000;
+  white-space: pre-line;
+  text-align: left;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 4rem auto;
   padding: 0 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
 }
 
-.service-item {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem 2rem;
 }
 
 .service-item h3 {
@@ -80,9 +112,8 @@
 }
 
 .service-item ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  list-style: disc;
+  padding-left: 1.5rem;
 }
 
 .service-item li {
@@ -91,11 +122,15 @@
 }
 
 @media (max-width: 768px) {
-  .banner h1 {
-    font-size: 2rem;
+  .banner-text {
+    font-size: 1.5rem;
   }
   .container {
     margin: 2rem auto;
+  }
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 </style>

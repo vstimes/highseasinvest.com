@@ -41,31 +41,51 @@
     "copyright": "© 2023 by High Seas Investment. All Rights Reserved."
   },
   "core_services": {
-    "corporate_finance": {
-      "title": "Corporate Finance",
+    "banner_text": "We provide comprehensive financial services with focuses on: travel, hospitality, leisure, wellness and sustainability.",
+    "investment_incubation": {
+      "title": "Investment & Incubation",
       "items": [
-        "Mergers & Acquisitions",
-        "Capital Raising",
-        "Company Disposal",
-        "Management Buy-Out/In"
+        "Selecting best-in-kind early-to-growth stage companies to invest, together with our co-investment partners",
+        "Connect to industry resources & strategies for partnership",
+        "Help with local headhunting, additional investment and gov support"
       ]
     },
-    "strategic_advisory": {
-      "title": "Strategic Advisory",
+    "strategy_consulting": {
+      "title": "Strategy Consulting",
       "items": [
-        "Market Entry Strategy",
-        "Business Plan Development",
-        "Feasibility Studies",
-        "Partnership Matching"
+        "Design market entry strategy, feasibility and structure",
+        "Review strategic growth options: WOFE, JV, M&A, Sales license, Franchise",
+        "Develop range of divestment options: disposal, carve-out"
       ]
     },
-    "venture_building": {
-      "title": "Venture Building",
+    "merger_acquisition": {
+      "title": "Merger & Acquisition",
       "items": [
-        "Incubation & Acceleration",
-        "Seed Investment",
-        "Go-to-Market Strategy",
-        "Team Building"
+        "Merger & Acquisition/ divestment strategy forming",
+        "Assistance on full execution process: material preparation, sourcing & origination, negotiation, due-diligence and deal closing assistance, as well as tactical advice throughout the transaction process"
+      ]
+    },
+    "company_globalization": {
+      "title": "Company Globalization & Expansion",
+      "items": [
+        "Local partner search and JV formation",
+        "Strategic advice on company set-up",
+        "Corporate overseas structure design"
+      ]
+    },
+    "fund_raising": {
+      "title": "Fund Raising",
+      "items": [
+        "Define financing objectives and identify sources of financing",
+        "Assistance on raising capital from funds or strategic investors"
+      ]
+    },
+    "destination_strategy": {
+      "title": "Destination Strategic Advisory",
+      "items": [
+        "Assistance on destination design & strategic planning",
+        "Destination one-stop solution advisory: product, operation, technology, distribution and marketing",
+        "Comprehensive international and domestic IP and brands development and implantation"
       ]
     }
   },
