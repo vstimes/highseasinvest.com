@@ -76,7 +76,7 @@ const switchLanguage = (lang) => {
   position: absolute;
   left: 0;
   top: 100%;
-  min-width: 120px;
+    min-width: max-content;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   border-radius: 6px;
