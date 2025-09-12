@@ -2,7 +2,7 @@
   <div class="core-services">
     <div class="banner">
       <img src="@/assets/core-service-banner.avif" alt="Core Services">
-      <h1>{{ $t('page_titles.core_services') }}</h1>
+      <h1 style="color:#333">{{ $t('page_titles.core_services') }}</h1>
     </div>
     <div class="container">
       <div class="service-item">
