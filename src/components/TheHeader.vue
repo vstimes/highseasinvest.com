@@ -38,7 +38,13 @@
     <router-link to="/about" @click="mobileNavOpen = false">{{ $t("nav.about") }}</router-link>
     <router-link to="/service-scenarios" @click="mobileNavOpen = false">{{ $t("nav.services") }}</router-link>
     <router-link to="/core-services" @click="mobileNavOpen = false">{{ $t("nav.core") }}</router-link>
-    <router-link to="/" @click="mobileNavOpen = false">{{ $t("nav.ecosystems") }}</router-link>
+    <div class="mobile-nav-dropdown">
+      <span class="mobile-nav-dropdown-label">{{ $t("nav.ecosystems") }}</span>
+      <div class="mobile-nav-dropdown-menu">
+        <router-link to="/happiness-industry-chain" @click="mobileNavOpen = false">{{ $t("nav.happinessIndustryChain") }}</router-link>
+        <router-link to="/sustainable-value-chain" @click="mobileNavOpen = false">{{ $t("nav.sustainableValueChain") }}</router-link>
+      </div>
+    </div>
     <router-link to="/contact" @click="mobileNavOpen = false">{{ $t("nav.contact") }}</router-link>
   </nav>
 </template>
@@ -56,6 +62,32 @@ const switchLanguage = (lang) => {
 </script>
 
 <style scoped>
+/* 移动端下拉菜单样式 */
+.mobile-nav-dropdown {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+.mobile-nav-dropdown-label {
+  font-weight: 500;
+  color: #003366;
+  padding: 1rem 2rem 0.5rem 2rem;
+  text-align: center;
+}
+.mobile-nav-dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+.mobile-nav-dropdown-menu router-link {
+  padding: 0.5rem 2rem;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+.mobile-nav-dropdown-menu router-link:last-child {
+  border-bottom: none;
+}
 /* 下拉菜单样式 */
 .nav-dropdown {
   position: relative;
