@@ -36,7 +36,7 @@
 import { useI18n } from 'vue-i18n';
 
 // As per instruction, using logo1-11 for the partners.
-import logo1 from '@/assets/logo1.avif';
+import logo1 from '@/assets/logo1.png';
 import logo2 from '@/assets/logo2.avif';
 import logo3 from '@/assets/logo3.avif';
 import logo4 from '@/assets/logo4.avif';
