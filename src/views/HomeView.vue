@@ -1,20 +1,21 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" style="height: 500px; overflow: hidden">
       <!-- Desktop Video -->
       <div v-if="!isMobile" class="video-container">
-        <video 
-          ref="videoPlayer" 
-          :poster="videoCover" 
-          autoplay 
-          loop 
-          muted 
-          playsinline 
-          class="hero-video" 
+        <video
+          ref="videoPlayer"
+          :poster="videoCover"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="hero-video"
           @error="handleVideoError"
+          style="height: 500px; object-fit: cover; display: block"
         >
-          <source src="@/assets/home-banner.mp4" type="video/mp4">
+          <source src="@/assets/home-banner.mp4" type="video/mp4" />
         </video>
       </div>
       <!-- Mobile Image -->
@@ -22,8 +23,8 @@
 
       <div class="hero-overlay">
         <div class="hero-content">
-          <h1>{{ $t('hero.title') }}</h1>
-          <h2>{{ $t('hero.subtitle') }}</h2>
+          <h1>{{ $t("hero.title") }}</h1>
+          <h2>{{ $t("hero.subtitle") }}</h2>
         </div>
       </div>
     </section>
@@ -31,7 +32,7 @@
     <!-- Founder Section -->
     <section class="founder-section">
       <div class="container">
-        <h2>{{ $t('founder.title') }}</h2>
+        <h2>{{ $t("founder.title") }}</h2>
         <p v-for="n in 8" :key="n">{{ $t(`founder.p${n}`) }}</p>
       </div>
     </section>
@@ -40,28 +41,28 @@
     <section class="focus-section">
       <router-link to="/happiness-industry-chain" class="focus-item">
         <div class="focus-content">
-          <p>{{ $t('focus.title1') }}</p>
-          <h3>{{ $t('focus.subtitle1') }}</h3>
+          <p>{{ $t("focus.title1") }}</p>
+          <h3>{{ $t("focus.subtitle1") }}</h3>
         </div>
       </router-link>
       <router-link to="/sustainable-value-chain" class="focus-item">
         <div class="focus-content">
-          <p>{{ $t('focus.title2') }}</p>
-          <h3>{{ $t('focus.subtitle2') }}</h3>
+          <p>{{ $t("focus.title2") }}</p>
+          <h3>{{ $t("focus.subtitle2") }}</h3>
         </div>
       </router-link>
     </section>
 
     <!-- Image Section -->
     <section class="image-section">
-      <img src="@/assets/index-bottom.avif" alt="Eiffel Tower">
+      <img src="@/assets/index-bottom.avif" alt="Eiffel Tower" />
     </section>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
-import videoCover from '@/assets/index-video-cover.jpg';
+import { ref, onMounted, onUnmounted } from "vue";
+import videoCover from "@/assets/index-video-cover.jpg";
 
 const videoPlayer = ref(null);
 const videoFailed = ref(false);
@@ -77,12 +78,12 @@ const checkScreenSize = () => {
 
 onMounted(() => {
   checkScreenSize();
-  window.addEventListener('resize', checkScreenSize);
+  window.addEventListener("resize", checkScreenSize);
 
   if (videoPlayer.value) {
     const promise = videoPlayer.value.play();
     if (promise !== undefined) {
-      promise.catch(error => {
+      promise.catch((error) => {
         console.error("Video autoplay was prevented:", error);
         videoFailed.value = true;
       });
@@ -91,7 +92,7 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  window.removeEventListener('resize', checkScreenSize);
+  window.removeEventListener("resize", checkScreenSize);
 });
 </script>
 
@@ -126,7 +127,7 @@ onUnmounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('@/assets/index-video-cover.jpg');
+  background-image: url("@/assets/index-video-cover.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -137,7 +138,7 @@ onUnmounted(() => {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -227,7 +228,8 @@ onUnmounted(() => {
 }
 
 /* Responsive */
-@media (max-width: 767px) { /* Changed to 767px to match JS */
+@media (max-width: 767px) {
+  /* Changed to 767px to match JS */
   .hero-content h1 {
     font-size: 2rem;
   }

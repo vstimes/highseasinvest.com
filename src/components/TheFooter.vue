@@ -1,10 +1,11 @@
 <template>
   <footer class="main-footer">
-    <p>{{ $t('footer.copyright') }}</p>
+    <p>© {{ currentYear }} {{ $t("footer.copyright") }}</p>
   </footer>
 </template>
 
 <script setup>
+const currentYear = new Date().getFullYear();
 </script>
 
 <style scoped>

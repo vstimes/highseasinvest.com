@@ -94,7 +94,7 @@ const sections = computed(() => {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 4rem auto;
   padding: 0 2rem;
 }

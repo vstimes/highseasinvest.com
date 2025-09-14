@@ -1,21 +1,38 @@
 <template>
   <div class="sustainable-chain">
     <div class="banner">
-      <p class="banner-text">{{ $t('sustainable_value_chain.banner_text') }}</p>
+      <p class="banner-text">{{ $t("sustainable_value_chain.banner_text") }}</p>
     </div>
 
     <div class="container">
       <nav class="sub-nav">
         <ul>
-          <li v-for="item in tm('sustainable_value_chain.sub_nav')" :key="item">{{ item }}</li>
+          <li v-for="item in tm('sustainable_value_chain.sub_nav').slice(0, 3)" :key="item">
+            {{ item }}
+          </li>
+        </ul>
+        <ul>
+          <li v-for="item in tm('sustainable_value_chain.sub_nav').slice(3)" :key="item">
+            {{ item }}
+          </li>
         </ul>
       </nav>
 
       <section class="partners-section">
-        <h2>{{ $t('sustainable_value_chain.partners.title') }}</h2>
+        <h2>{{ $t("sustainable_value_chain.partners.title") }}</h2>
         <div class="partners-grid">
-          <div class="card" v-for="(partner, index) in tm('sustainable_value_chain.partners.list')" :key="partner.title">
-            <img :src="partnerLogos[index]" :alt="partner.title" class="card-logo">
+          <div
+            class="card"
+            v-for="(partner, index) in tm(
+              'sustainable_value_chain.partners.list'
+            )"
+            :key="partner.title"
+          >
+            <img
+              :src="partnerLogos[index]"
+              :alt="partner.title"
+              class="card-logo"
+            />
             <h3>{{ partner.title }}</h3>
             <p>{{ partner.description }}</p>
           </div>
@@ -23,9 +40,14 @@
       </section>
 
       <section class="support-section">
-        <h3>{{ $t('sustainable_value_chain.support_unit.title') }}</h3>
+        <h3>{{ $t("sustainable_value_chain.support_unit.title") }}</h3>
         <ul>
-          <li v-for="item in tm('sustainable_value_chain.support_unit.list')" :key="item">{{ item }}</li>
+          <li
+            v-for="item in tm('sustainable_value_chain.support_unit.list')"
+            :key="item"
+          >
+            {{ item }}
+          </li>
         </ul>
       </section>
     </div>
@@ -33,27 +55,36 @@
 </template>
 
 <script setup>
-import { useI18n } from 'vue-i18n';
+import { useI18n } from "vue-i18n";
 
 // As per instruction, using logo1-11 for the partners.
-import logo1 from '@/assets/logo1.png';
-import logo2 from '@/assets/logo2.avif';
-import logo3 from '@/assets/logo3.avif';
-import logo4 from '@/assets/logo4.avif';
-import logo5 from '@/assets/logo5.avif';
-import logo6 from '@/assets/logo6.avif';
-import logo7 from '@/assets/logo7.avif';
-import logo8 from '@/assets/logo8.avif';
-import logo9 from '@/assets/logo9.avif';
-import logo10 from '@/assets/logo10.avif';
-import logo11 from '@/assets/logo11.avif';
+import logo1 from "@/assets/logo1.png";
+import logo2 from "@/assets/logo2.avif";
+import logo3 from "@/assets/logo3.avif";
+import logo4 from "@/assets/logo4.avif";
+import logo5 from "@/assets/logo5.avif";
+import logo6 from "@/assets/logo6.avif";
+import logo7 from "@/assets/logo7.avif";
+import logo8 from "@/assets/logo8.avif";
+import logo9 from "@/assets/logo9.avif";
+import logo10 from "@/assets/logo10.avif";
+import logo11 from "@/assets/logo11.avif";
 
 const { t, tm } = useI18n();
 
 const partnerLogos = [
-  logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10, logo11
+  logo1,
+  logo2,
+  logo3,
+  logo4,
+  logo5,
+  logo6,
+  logo7,
+  logo8,
+  logo9,
+  logo10,
+  logo11,
 ];
-
 </script>
 
 <style scoped>
@@ -68,13 +99,13 @@ const partnerLogos = [
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('@/assets/sut-banner.avif');
+  background-image: url("@/assets/sut-banner.avif");
   background-size: cover;
   background-position: center;
 }
 
 .banner::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -107,11 +138,15 @@ const partnerLogos = [
 .sub-nav ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0.5rem 0;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
+.sub-nav ul:last-child {
+  margin-bottom: 0;
+}
+
 
 .sub-nav li {
   font-size: 1.1rem;

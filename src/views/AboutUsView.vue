@@ -85,7 +85,7 @@ const { t } = useI18n();
 
 .container {
   max-width: 900px;
-  margin: 4rem auto;
+  margin: 1rem auto;
   padding: 0 2rem;
 }
 
@@ -93,7 +93,7 @@ const { t } = useI18n();
   display: flex;
   gap: 2rem;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 
 .image-container {
@@ -124,9 +124,6 @@ const { t } = useI18n();
   margin-bottom: 1.5rem;
 }
 
-.keywords-section {
-  margin-top: 4rem;
-}
 
 .keywords-section blockquote {
   font-size: 1.1rem;
@@ -171,7 +168,7 @@ const { t } = useI18n();
     font-size: 1.5rem;
   }
   .container {
-    margin: 2rem auto;
+    margin: 1rem auto;
   }
   .feature-section {
     flex-direction: column;
